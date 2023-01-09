@@ -34,5 +34,5 @@ jobs:
         INPUT_MESSAGE="${{ github.event.inputs.message}}"
         echo "$INPUT_NAME"
         echo "$INPUT_MESSAGE"
-        javac JP.java
+        java JP.java
     
