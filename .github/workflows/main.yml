@@ -6,23 +6,23 @@ on:
         type: choice
         description: Who to greet
         options: 
-        - monalisa
-        - cschleiden
+        - Gopi Mukkapati
+        - CloudEQ Team
       message:
         required: true
-      use-emoji:
-        type: boolean
-        description: Include  emojis
-      environment:
-        type: environment
 
 jobs:
   greet:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send greeting
+    - name: Send greetings (Executed through Command Line (bash))
       run:  |
         echo "${{ github.event.inputs.message }}"
         echo "${{ github.event.inputs.name }}"
+    - name: Setup Java JDK
+      uses: actions/setup-java@v3.9.0
+    - name: Execute Java Program
+      run: |
+        java -version
     
