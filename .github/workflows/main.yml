@@ -20,6 +20,8 @@ jobs:
       run:  |
         echo "${{ github.event.inputs.message }}"
         echo "${{ github.event.inputs.name }}"
+    - name: Checkout
+      uses: actions/checkout@v3.3.0
     - name: Setup Java
       uses: actions/setup-java@v3
       with:
@@ -28,4 +30,7 @@ jobs:
     - name: Execute Java Program
       run: |
         java -version
+        INPUT_NAME=${{ github.event.inputs.name }}
+        INPUT_MESSAGE="${{ github.event.inputs.name }}"
+        echo "$INPUT_NAME"
     
