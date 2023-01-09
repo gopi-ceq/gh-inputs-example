@@ -6,8 +6,8 @@ on:
         type: choice
         description: Who to greet
         options: 
-        - Gopi Mukkapati
-        - CloudEQ Team
+        - Gopi
+        - CloudEQ
       message:
         required: true
 
@@ -31,6 +31,7 @@ jobs:
       run: |
         java -version
         INPUT_NAME=${{ github.event.inputs.name }}
-        INPUT_MESSAGE="${{ github.event.inputs.name }}"
+        INPUT_MESSAGE="${{ github.event.inputs.message}}"
         echo "$INPUT_NAME"
+        echo "$INPUT_MESSAGE"
     
