@@ -20,8 +20,11 @@ jobs:
       run:  |
         echo "${{ github.event.inputs.message }}"
         echo "${{ github.event.inputs.name }}"
-    - name: Setup Java JDK
-      uses: actions/setup-java@v3.9.0
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
     - name: Execute Java Program
       run: |
         java -version
