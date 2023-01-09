@@ -32,7 +32,7 @@ jobs:
         java -version
         INPUT_NAME=${{ github.event.inputs.name }}
         INPUT_MESSAGE="${{ github.event.inputs.message}}"
-        echo "$INPUT_NAME"
-        echo "$INPUT_MESSAGE"
+        export INPUT_NAME = $INPUT_NAME
+        export INPUT_MESSAGE = $INPUT_MESSAGE
         java JP.java
     
