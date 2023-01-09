@@ -4,12 +4,9 @@ public class JP {
     public static void main(String[] args) {
   
         System.out.println(
-            String.format("The current shell is: %s.", System.getenv("INPUT_NAME"))
+            String.format("%s %s", System.getenv("INPUT_MESSAGE") ,System.getenv("INPUT_NAME"))
            
         );
-        System.out.println(
-            String.format("The current shell is: %s.", System.getenv("INPUT_MESSAGE"))
-           
-        );
+
     }
 }
